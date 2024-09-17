@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-cloud-config-server-vault
+  profiles:
+    active: vault
+  cloud:
+    config:
+      server:
+        vault:
+          host: ${HASHICORP_HOST}
+          port: ${HASHICORP_PORT}
+          scheme: ${HASHICORP_SCHEME}
+          authentication: token
+          token: ${HASHICORP_TOKEN}
+          kv-version: ${HASHICORP_KV_VERSION}
+          backend: ${HASHICORP_SECRET}
